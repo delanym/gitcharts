@@ -173,7 +173,7 @@ def _(subprocess):
         else:
             # Clone fresh
             subprocess.run(
-                ["git", "clone", repo_url, str(repo_path)],
+                ["git", "clone", "--filter=blob:none", repo_url, str(repo_path)],
                 capture_output=True,
                 check=True,
             )
