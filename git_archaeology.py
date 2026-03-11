@@ -329,6 +329,7 @@ def _(cache, datetime, subprocess):
                 executor.submit(analyze_single_commit, str(repo_path), h, d, extensions): (h, d)
                 for h, d in sampled_commits
             }
+            print("Analyzing...", end="", flush=True)
             for future in as_completed(futures):
                 commit_hash, _ = futures[future]
                 done += 1
