@@ -1,3 +1,5 @@
+.idea/
+.venv/
 .downloads/
 __marimo__/
 repo-cache
